@@ -680,7 +680,7 @@ section,
 }
 
 /* ✅ Mobile (<768px) */
-@media (max-width: 767px) {
+@media (max-width: 852px) {
   #hero {
     height: 100dvh; /* ✅ Handles iPhones properly */
     min-height: -webkit-fill-available;
