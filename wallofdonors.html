@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wall of Donors</title>
+  <style>
+    :root {
+      --primary-color: #B04B34;
+      --hover-border: #B04B34;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* Banner */
+    .banner {
+      position: relative;
+      background-image: url('testimonials/_IIT6245.JPG'); /* Adjust path if needed */
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .banner::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .banner h1,
+    .banner p {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+    }
+
+    .banner h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .banner p {
+      font-size: 16px;
+      color: #fff3f0;
+    }
+
+    /* Wall of Donors */
+    .pledge-wall {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      padding: 20px;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .pledge-card {
+      background: var(--primary-color);
+      border-radius: 6px;
+      color: white;
+      box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15);
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s ease;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .pledge-card:hover {
+      background-color: white;
+      color: black;
+      border-bottom: 4px solid var(--hover-border);
+    }
+
+    /* Responsive Tablet */
+    @media (min-width: 600px) {
+      .banner {
+        height: 400px;
+      }
+      .banner h1 {
+        font-size: 36px;
+      }
+      .banner p {
+        font-size: 18px;
+      }
+      .pledge-wall {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 30px;
+      }
+    }
+
+    /* Responsive Desktop */
+    @media (min-width: 992px) {
+      .pledge-wall {
+        grid-template-columns: repeat(6, 1fr);
+        padding: 40px;
+        max-width: 1400px;
+        margin: auto;
+      }
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 480px) {
+      .banner h1 {
+        font-size: 24px;
+      }
+      .banner p {
+        font-size: 14px;
+      }
+      .pledge-card {
+        font-size: 13px;
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Banner -->
+  <div class="banner">
+    <h1>Wall of Donors</h1>
+    <p>Celebrating the generous spirit of our alumni and well-wishers</p>
+  </div>
+
+  <!-- Wall Display -->
+  <div id="pledgeWall" class="pledge-wall"></div>
+
+  <script>
+    const names = [
+      "Mahima Agarwal - 1996", "Amit Verma - 1995", "Priya Singh - 1997",
+      "Rahul Mehta - 1996", "Sanya Kapoor - 1995", "Neha Agarwal - 1997",
+      "Vikram Das - 1996", "Ishita Malhotra - 1995", "Kabir Choudhary - 1996",
+      "Rajiv Kumar - 1997", "Meenakshi Iyer - 1995", "Suhas Joshi - 1996",
+      "Divya Patil - 1997", "Ananya Tripathi - 1995", "Kunal Thakur - 1996",
+      "Rohan Gupta - 1997", "Aditya Rao - 1995", "Pooja Mishra - 1996",
+      "Ravi Shankar - 1997", "Simran Kaur - 1995", "Deepak Jaiswal - 1996",
+      "Aarti Saxena - 1997", "Nikhil Dubey - 1995", "Shreya Goyal - 1996",
+      "Sameer Malhotra - 1997", "Ritu Anand - 1995", "Akash Bansal - 1996",
+      "Tanvi Bajpai - 1997", "Yash Tiwari - 1995", "Swati Khanna - 1996",
+      "Abhishek Yadav - 1997", "Kritika Joshi - 1995", "Siddharth Malhotra - 1996",
+      "Dhruv Sharma - 1997", "Meera Naik - 1995", "Aryan Kapoor - 1996",
+      "Sneha Roy - 1997", "Manoj Pillai - 1995", "Lavanya Singh - 1996",
+      "Bhavya Shah - 1997", "Rakesh Nair - 1995", "Sonali Mukherjee - 1996",
+      "Ankur Sethi - 1997", "Mitali Chatterjee - 1995", "Varun Saxena - 1996",
+      "Harshita Reddy - 1997", "Gautam Bhatia - 1995", "Siddhi Verma - 1996",
+      "Devansh Pandey - 1997", "Arvind Nair - 1995"
+    ];
+
+    const pledgeWall = document.getElementById('pledgeWall');
+
+    names.forEach(name => {
+      const card = document.createElement('div');
+      card.classList.add('pledge-card');
+      card.innerHTML = `<div class="name">${name}</div>`;
+      pledgeWall.appendChild(card);
+    });
+  </script>
+
+</body>
+</html>
