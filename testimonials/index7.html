@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rewards Section</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f0f2f5;
+    }
+
+    .rewards-section {
+      padding: 80px 0;
+      background-color: #f9fafb;
+      font-family: 'Inter', sans-serif;
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 60px;
+      color: #111827;
+      font-weight: 600;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background-color: #6366f1;
+      margin: 12px auto 0;
+      border-radius: 2px;
+    }
+
+    .reward-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      justify-items: center;
+      gap: 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .reward-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      cursor: pointer;
+      border-radius: 12px;
+    }
+
+    .reward-item:hover {
+      transform: translateY(-6px);
+      background-color: #eef2ff;
+    }
+
+    .reward-item .icon {
+      font-size: 3rem;
+      color: #6366f1;
+      margin-bottom: 12px;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .reward-item:hover .icon {
+      transform: scale(1.2) rotate(10deg);
+      color: #4f46e5;
+    }
+
+    .reward-item p {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #1f2937;
+      margin: 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .reward-list {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 25px;
+      }
+      
+      .section-title {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .rewards-section {
+        padding: 60px 0;
+      }
+      
+      .reward-list {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 20px;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+      }
+      
+      .reward-item .icon {
+        font-size: 2.5rem;
+      }
+      
+      .reward-item p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .rewards-section {
+        padding: 50px 0;
+      }
+      
+      .reward-list {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+      }
+      
+      .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+      }
+      
+      .reward-item {
+        padding: 15px 10px;
+      }
+      
+      .reward-item .icon {
+        font-size: 2.2rem;
+      }
+      
+      .reward-item p {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .reward-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+      
+      .section-title {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="rewards-section">
+    <div class="container">
+      <h2 class="section-title">Rewards Beyond Giving</h2>
+      <div class="reward-list">
+        <div class="reward-item">
+          <div class="icon">💰</div>
+          <p>Tax Benefits under Section 501(c)</p>
+        </div>
+        <div class="reward-item">
+          <div class="icon">🚀</div>
+          <p>Amplify Impact with Vision-Aligned Giving</p>
+        </div>
+        <div class="reward-item">
+          <div class="icon">📈</div>
+          <p>Transparent Donation Mapping</p>
+        </div>
+        <div class="reward-item">
+          <div class="icon">💖</div>
+          <p>Personal Fulfillment</p>
+        </div>
+        <div class="reward-item">
+          <div class="icon">🤝</div>
+          <p>Networking & Connection</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
