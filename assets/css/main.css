@@ -499,6 +499,20 @@ h6 {
   .footer-links a.guidebook-btn {
     display: inline-block; /* ensures the link centers properly */
     margin-top: 10px;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .footer-about {
+    text-align: center;
+  }
+
+  .footer-about .logo {
+    justify-content: center;
+  }
+
+  .footer-about .social-links {
+    justify-content: center;
   }
 }
 

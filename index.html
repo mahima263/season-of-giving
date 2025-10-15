@@ -37,57 +37,94 @@
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container position-relative d-flex align-items-center justify-content-between">
+  <!-- Mobile Donate Button (Sub-header) -->
+<div class="mobile-donate text-center d-sm-none">
+  <a href="https://iitkfoundation.org/donate/Annual-Gift-Programme" class="btn btn-primary">Donate Now</a>
+</div>
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Logo Image (if any) -->
-         <img class=" .logo-img" src="testimonials/IITK_logo.png" alt="Logo">
-        
-        <!-- Horizontal Line -->
-        <span class="vertical-divider mx-2"></span>
-        
-        <!-- Text -->
-        <h1 class="sitename ms-2 text-white">Season of Giving</h1>
-      </a>
-      
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container position-relative d-flex align-items-center justify-content-between">
 
-      <style>
-  
+    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <img class="logo-img" src="testimonials/IITK_logo.png" alt="Logo">
+      <span class="vertical-divider mx-2"></span>
+      <h1 class="sitename ms-2 text-white">Season of Giving</h1>
+    </a>
 
- 
+    <style>
+      .vertical-divider {
+        width: 1px;
+        height: 28px;
+        background: rgb(255, 255, 255);
+        display: inline-block;
+        margin: 0 15px;
+      }
+    </style>
 
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#about-season" class="active">About</a></li>
+        <li><a href="#contribution">Impact</a></li>
+        <li><a href="#rewards">Rewards</a></li>
+        <li><a href="#stories">Stories of Change</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
 
-/* For better visibility */
-.vertical-divider {
-  width: 1px;
-  height: 28px;
-  background: rgb(255, 255, 255);
-  display: inline-block;
-  margin: 0 15px;
+    <!-- Desktop Donate Button -->
+    <a class="btn-getstarted d-none d-sm-block" href="https://iitkfoundation.org/donate/Annual-Gift-Programme">Donate Now</a>
+  </div>
+</header>
+
+  <style>
+    /* Mobile Donate Button Sub-header */
+/* Mobile Donate Sub-header */
+/* Mobile Donate Sub-header */
+.mobile-donate {
+  background: #cfa20cbd; /* Golden theme shade */
+  padding: 5px 0; /* 🔽 Reduced from 10px to 4px */
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
 }
-      </style>
+
+/* Button Style (smaller and balanced) */
+.mobile-donate .btn {
+  background: #fff;
+  color: #B04B34;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 2px 10px; /* 🔽 Smaller padding */
+  font-size: 14px;   /* 🔽 Slightly smaller text */
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.mobile-donate .btn:hover {
+  background: #0E777E;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/* Adjust header position for new height */
+@media (max-width: 576px) {
+  #header {
+    top: 35px; /* 🔽 Reduced from 50px */
+    z-index: 1000;
+  }
+}
 
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#about-season" class="active">About</a></li>
-          <li><a href="#contribution">Impact</a></li>
-          <li><a href="#voices">Voices of Generosity</a></li>
-          <li><a href="#rewards">Rewards</a></li>
 
-          <li><a href="#stories">Stories of Change</a></li>
-          <li><a href="#footer">Contact</a></li>
-
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="btn-getstarted d-none d-sm-block" href="https://iitkfoundation.org/donate/Annual-Gift-Programme">Donate Now</a>
-
-    </div>
-  </header>
-
+  </style>
+  <!-- Mobile Donate Button (Sub-header) -->
+  <div class="mobile-donate text-center d-sm-none">
+    <a href="https://iitkfoundation.org/donate/Annual-Gift-Programme" class="btn btn-primary">Donate Now</a>
+  </div>
+  
   <main class="main">
 
     <!-- Hero Section -->
@@ -108,35 +145,30 @@
             <div class="about-season-content" style="overflow: visible;">
               <p class="fs-5">
                 The Season of Giving at IIT Kanpur is a heartfelt celebration of generosity, community, and the shared journey of creating a lasting impact. This special initiative invites alumni, donors, and well-wishers to support the growth and advancement of the institute. Every gift supports diverse initiatives, empowering students, strengthening faculty endeavors, and fostering a culture of innovation and excellence.
-
-
               </p>
               <p class="fs-5">
-
-                Last year marked a bold step towards strengthening IIT Kanpur’s global impact. The Institute’s ambitious $600M campaign has already gained remarkable momentum, with 46% of the target committed, including 11% from our alumni. This progress stands as a testament to the unwavering commitment and support of the IITK community. 
-
+                Last year marked a bold step towards strengthening IIT Kanpur’s global impact. The Institute’s ambitious $600M campaign has already gained remarkable momentum, with 46% of the target committed, including 11% from our alumni. This progress stands as a testament to the unwavering commitment and support of the IITK community.
               </p>
               <p class="fs-5">
-
                 With this belief in our collective vision, join the season’s spirit and help shape a promising future for IIT Kanpur.
-
-
               </p>
-              <div class="mt-4">
-                <a href="testimonials/Annual Giving Report 2024-Final Oct 2025.pdf" target="_blank" class="btn btn-primary px-4 py-2"
-                  style="background-color: #B04B34; border: none; border-radius: 6px; text-align: center; font-size:1.2rem;">
-                  </i> View Annual Giving Report 2025
-                </a>
-              </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="about-season-image-wrapper">
+      
+          <div class="col-lg-6 position-relative">
+            <div class="about-season-image-wrapper position-relative">
               <img src="testimonials/About.jpeg" class="img-fluid main-image shadow" alt="About Season of Giving">
+              <a href="testimonials/Annual Giving Report 2024-Final Oct 2025.pdf" target="_blank"
+                class="btn btn-primary position-absolute"
+                style="background-color: #edeceb; color: #B04B34; border: 2px solid #B04B34; border-radius: 6px; font-size:1.1rem; padding: 10px 20px; bottom: 20px; left: 50%; transform: translateX(-50%); font-weight: 600;">
+                Annual Giving Report 2025
+              </a>
             </div>
           </div>
         </div>
       </div>
+      
+      
 
 
 
@@ -772,30 +804,42 @@
     }
     /* Yeh last resort hai - forcefully left align karo */
     @media (max-width: 768px) {
-.testimonial {
-flex-direction: column; /* Stack text aur image vertically */
-text-align: center;
-}
+  .testimonial {
+    flex-direction: column; /* ✅ Stack vertically */
+    text-align: center;
+    align-items: center; /* Center everything horizontally */
+  }
 
-.testimonial img {
-width: 80%;       /* Mobile ke liye responsive width */
-height: auto;     /* Aspect ratio maintain rahe */
-margin: 20px auto; /* Thoda spacing top-bottom */
-object-fit: contain; /* Image crop na ho */
-border-radius: 10px;
-}
+  /* ✅ Image first */
+  .testimonial img {
+    order: 1; /* Image ko upar rakhne ke liye */
+    width: 90%; /* Screen width ka 90% tak stretch kare */
+    max-width: 250px; /* Par zyada bada na ho */
+    height: auto; /* Aspect ratio maintain rahe */
+    margin: 0 auto 20px auto; /* Center aur thoda spacing */
+    border-radius: 10px;
+    object-fit: contain; /* Image crop na ho */
+    display: block;
+  }
 
-.testimonial-text > div:first-child {
-text-align: left !important;
-justify-content: flex-start !important;
-display: flex !important;
-width: 100%;
-}
+  /* ✅ Text below image */
+  .testimonial-text {
+    order: 2;
+    padding: 0 10px;
+  }
 
-.open-quote {
-margin-left: 0 !important;
-margin-right: auto !important;
-}
+  /* Quote icons left-align karne ke liye */
+  .testimonial-text > div:first-child {
+    text-align: left !important;
+    justify-content: flex-start !important;
+    display: flex !important;
+    width: 100%;
+  }
+
+  .open-quote {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
 }
 
   </style>
@@ -813,7 +857,7 @@ margin-right: auto !important;
             </div>
             <div class="rewards-item">
               <div class="icon"><i class="fas fa-rocket"></i></div>
-              <p>Amplify Impact with Vision-Aligned Giving</p>
+              <p>Double Your Impact with Donation Matching</p>
             </div>
             <div class="rewards-item">
               <div class="icon"><i class="fas fa-chart-line"></i></div>
@@ -901,7 +945,7 @@ margin-right: auto !important;
       
         .rewards-unique-section .rewards-item p {
           font-size: 1.5rem;
-          font-weight: 50;
+          font-weight: 500;
           color: #B04B34;
           margin: 0;
           line-height: 1.4;
