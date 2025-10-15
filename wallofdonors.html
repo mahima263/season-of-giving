@@ -75,8 +75,9 @@
       border-radius: 6px;
       color: white;
       box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15);
-      height: 60px;
+      min-height: 70px;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       transition: 0.3s ease;
@@ -89,6 +90,18 @@
       background-color: white;
       color: black;
       border-bottom: 4px solid var(--hover-border);
+    }
+
+    .pledge-card .name {
+      font-size: 18px;
+      margin-bottom: 2px;
+    }
+
+    .pledge-card .batch {
+      font-size: 14px;
+      font-style: regular;
+      margin-top: 3px;
+      opacity: 0.85;
     }
 
     /* Responsive Tablet */
@@ -128,7 +141,7 @@
       }
       .pledge-card {
         font-size: 13px;
-        height: 50px;
+        min-height: 60px;
       }
     }
   </style>
@@ -145,32 +158,29 @@
   <div id="pledgeWall" class="pledge-wall"></div>
 
   <script>
-    const names = [
-      "Mahima Agarwal - 1996", "Amit Verma - 1995", "Priya Singh - 1997",
-      "Rahul Mehta - 1996", "Sanya Kapoor - 1995", "Neha Agarwal - 1997",
-      "Vikram Das - 1996", "Ishita Malhotra - 1995", "Kabir Choudhary - 1996",
-      "Rajiv Kumar - 1997", "Meenakshi Iyer - 1995", "Suhas Joshi - 1996",
-      "Divya Patil - 1997", "Ananya Tripathi - 1995", "Kunal Thakur - 1996",
-      "Rohan Gupta - 1997", "Aditya Rao - 1995", "Pooja Mishra - 1996",
-      "Ravi Shankar - 1997", "Simran Kaur - 1995", "Deepak Jaiswal - 1996",
-      "Aarti Saxena - 1997", "Nikhil Dubey - 1995", "Shreya Goyal - 1996",
-      "Sameer Malhotra - 1997", "Ritu Anand - 1995", "Akash Bansal - 1996",
-      "Tanvi Bajpai - 1997", "Yash Tiwari - 1995", "Swati Khanna - 1996",
-      "Abhishek Yadav - 1997", "Kritika Joshi - 1995", "Siddharth Malhotra - 1996",
-      "Dhruv Sharma - 1997", "Meera Naik - 1995", "Aryan Kapoor - 1996",
-      "Sneha Roy - 1997", "Manoj Pillai - 1995", "Lavanya Singh - 1996",
-      "Bhavya Shah - 1997", "Rakesh Nair - 1995", "Sonali Mukherjee - 1996",
-      "Ankur Sethi - 1997", "Mitali Chatterjee - 1995", "Varun Saxena - 1996",
-      "Harshita Reddy - 1997", "Gautam Bhatia - 1995", "Siddhi Verma - 1996",
-      "Devansh Pandey - 1997", "Arvind Nair - 1995"
+    const donors = [
+      { name: "Mahima Agarwal", batch: "B.Tech/ME/1996" },
+      { name: "Amit Verma", batch: "B.Tech/EE/1995" },
+      { name: "Priya Singh", batch: "B.Tech/CS/1997" },
+      { name: "Rahul Mehta", batch: "B.Tech/ME/1996" },
+      { name: "Sanya Kapoor", batch: "B.Tech/EE/1995" },
+      { name: "Neha Agarwal", batch: "B.Tech/CS/1997" },
+      { name: "Vikram Das", batch: "B.Tech/ME/1996" },
+      { name: "Ishita Malhotra", batch: "B.Tech/EE/1995" },
+      { name: "Kabir Choudhary", batch: "B.Tech/ME/1996" },
+      { name: "Rajiv Kumar", batch: "B.Tech/CS/1997" }
+      // Add more as needed
     ];
 
     const pledgeWall = document.getElementById('pledgeWall');
 
-    names.forEach(name => {
+    donors.forEach(donor => {
       const card = document.createElement('div');
       card.classList.add('pledge-card');
-      card.innerHTML = `<div class="name">${name}</div>`;
+      card.innerHTML = `
+        <div class="name">${donor.name}</div>
+        <div class="batch">${donor.batch}</div>
+      `;
       pledgeWall.appendChild(card);
     });
   </script>
