@@ -38,92 +38,135 @@
 <body class="index-page">
 
   <!-- Mobile Donate Button (Sub-header) -->
-<div class="mobile-donate text-center d-sm-none">
-  <a href="https://iitkfoundation.org/donate/Annual-Gift-Programme" class="btn btn-primary">Donate Now</a>
-</div>
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
 
-<header id="header" class="header d-flex align-items-center fixed-top">
-  <div class="container position-relative d-flex align-items-center justify-content-between">
+        <!-- Left Side: Logo + Divider + Heading -->
+        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+            <img class="logo-img" src="testimonials/IITK_logo.png" alt="Logo">
+            <span class="vertical-divider mx-2"></span>
+            <h1 class="sitename text-white mb-0">Season of Giving</h1>
+        </a>
 
-    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-      <img class="logo-img" src="testimonials/IITK_logo.png" alt="Logo">
-      <span class="vertical-divider mx-2"></span>
-      <h1 class="sitename ms-2 text-white">Season of Giving</h1>
-    </a>
+        <!-- Navigation -->
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="#about-season" class="active">About</a></li>
+                <li><a href="#contribution">Impact</a></li>
+                <li><a href="#rewards">Rewards</a></li>
+                <li><a href="#stories">Stories of Change</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+            <!-- ✅ Keeping original class so hamburger works -->
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
 
-    <style>
-      .vertical-divider {
-        width: 1px;
-        height: 28px;
-        background: rgb(255, 255, 255);
-        display: inline-block;
-        margin: 0 15px;
-      }
-    </style>
+        <!-- Desktop Donate Button -->
+        <a class="btn-getstarted d-none d-sm-block" href="https://iitkfoundation.org/donate/Annual-Gift-Programme">
+            Donate Now
+        </a>
 
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#about-season" class="active">About</a></li>
-        <li><a href="#contribution">Impact</a></li>
-        <li><a href="#rewards">Rewards</a></li>
-        <li><a href="#stories">Stories of Change</a></li>
-        <li><a href="#footer">Contact</a></li>
-      </ul>
-      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-    </nav>
-
-    <!-- Desktop Donate Button -->
-    <a class="btn-getstarted d-none d-sm-block" href="https://iitkfoundation.org/donate/Annual-Gift-Programme">Donate Now</a>
-  </div>
+    </div>
 </header>
-
+    <!-- Mobile Donate Button -->
+    <a class="mobile-donate-btn" href="https://iitkfoundation.org/donate/Annual-Gift-Programme">
+      Donate Now
+  </a>
   <style>
-    /* Mobile Donate Button Sub-header */
-/* Mobile Donate Sub-header */
-/* Mobile Donate Sub-header */
-.mobile-donate {
-  background: #cfa20cbd; /* Golden theme shade */
-  padding: 5px 0; /* 🔽 Reduced from 10px to 4px */
-  text-align: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1001;
-}
+    /* Header base */
+    #header {
+        background: #B04B34;
+        padding: 10px 0;
+        z-index: 1002;
+    }
 
-/* Button Style (smaller and balanced) */
-.mobile-donate .btn {
-  background: #fff;
-  color: #B04B34;
-  font-weight: 600;
-  border-radius: 20px;
-  padding: 2px 10px; /* 🔽 Smaller padding */
-  font-size: 14px;   /* 🔽 Slightly smaller text */
-  transition: all 0.3s ease;
-  border: none;
-}
+    .logo-img {
+        height: 48px; /* ✅ Bigger on desktop */
+        transition: 0.3s ease;
+    }
 
-.mobile-donate .btn:hover {
-  background: #0E777E;
-  color: #fff;
-  border: 1px solid #fff;
-}
+    .vertical-divider {
+        width: 1px;
+        height: 34px;
+        background: #fff;
+    }
 
-/* Adjust header position for new height */
-@media (max-width: 576px) {
-  #header {
-    top: 35px; /* 🔽 Reduced from 50px */
-    z-index: 1000;
-  }
-}
+    .sitename {
+        font-size: 1.4rem; /* ✅ Increased heading size */
+        font-weight: 600;
+        color: #fff;
+        white-space: nowrap;
+        transition: 0.3s ease;
+    }
 
+    /* Desktop donate button */
+    .btn-getstarted {
+        background: #cfa20c;
+        color: #fff;
+        font-weight: 600;
+        padding: 8px 22px; /* ✅ Slightly bigger CTA */
+        border-radius: 25px;
+        text-decoration: none;
+        transition: 0.3s ease;
+        white-space: nowrap;
+    }
 
+    .btn-getstarted:hover {
+        background: #b8900a;
+        color: #fff;
+    }
 
-  </style>
-  <!-- Mobile Donate Button (Sub-header) -->
-  <div class="mobile-donate text-center d-sm-none">
-    <a href="https://iitkfoundation.org/donate/Annual-Gift-Programme" class="btn btn-primary">Donate Now</a>
-  </div>
+    /* Mobile donate button */
+    .mobile-donate-btn {
+        display: none;
+        background: #cfa20c;
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: 600;
+        padding: 12px 22px;
+        border-radius: 25px;
+        text-decoration: none;
+        text-align: center;
+        transition: 0.3s ease;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1001;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .mobile-donate-btn:hover {
+        background: #b8900a;
+        color: #fff;
+    }
+
+    /* ---------- Mobile View ---------- */
+    @media (max-width: 991px) {
+        .logo-img {
+            height: 34px; /* Compact logo */
+        }
+
+        .sitename {
+            font-size: 1rem; /* Compact heading */
+        }
+
+        .btn-getstarted {
+            display: none !important; /* Hide desktop donate button on mobile */
+        }
+
+        .mobile-donate-btn {
+            display: block; /* Show mobile donate button */
+        }
+
+        .mobile-nav-toggle {
+            font-size: 1.6rem;
+            color: #fff;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    }
+</style>
+  
   
   <main class="main">
 
@@ -142,7 +185,7 @@
       <div class="container">
         <div class="row align-items-center gy-4">
           <div class="col-lg-6">
-            <div class="about-season-content" style="overflow: visible;">
+            <div class="about-season-content">
               <p class="fs-5">
                 The Season of Giving at IIT Kanpur is a heartfelt celebration of generosity, community, and the shared journey of creating a lasting impact. This special initiative invites alumni, donors, and well-wishers to support the growth and advancement of the institute. Every gift supports diverse initiatives, empowering students, strengthening faculty endeavors, and fostering a culture of innovation and excellence.
               </p>
@@ -157,16 +200,18 @@
       
           <div class="col-lg-6 position-relative">
             <div class="about-season-image-wrapper position-relative">
-              <img src="testimonials/About.jpeg" class="img-fluid main-image shadow" alt="About Season of Giving">
-              <a href="testimonials/Annual Giving Report 2024-Final Oct 2025.pdf" target="_blank"
-                class="btn btn-primary position-absolute"
-                style="background-color: #edeceb; color: #B04B34; border: 2px solid #B04B34; border-radius: 6px; font-size:1.1rem; padding: 10px 20px; bottom: 20px; left: 50%; transform: translateX(-50%); font-weight: 600;">
-                Annual Giving Report 2025
+              <a href="testimonials/Annual Giving Report 2024-Final Oct 2025.pdf" target="_blank" class="d-block position-relative">
+                <img src="testimonials/About.jpeg" class="img-fluid main-image shadow" alt="About Season of Giving">
+                <span class="btn season-btn position-absolute" style="bottom: 20px; left: 50%; transform: translateX(-50%);">
+                  View Annual Giving Report 2025
+                </span>
               </a>
             </div>
           </div>
+          
         </div>
       </div>
+      
       
       
 
@@ -1238,10 +1283,10 @@
             <span class="sitename">IITK Foundation</span>
           </a>
           <div class="social-links d-flex mt-3">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-youtube"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href="https://x.com/IITKanpur?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/iitkanpur/"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.youtube.com/@iitkanpur"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.linkedin.com/school/indian-institute-of-technology-kanpur"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
 
@@ -1253,10 +1298,10 @@
           <h4>Contact Us</h4>
           <p>3790 EI Camino Real, #1038</p>
           <p>Palo Alto, CA 94306</p>
-          <p class="mt-2"><strong>Phone:</strong> <span><a href="tel:+16505078719">+1 650-507-8719</a></span></p>
-          <p><strong>Email:</strong> <span><a href="mailto:cfo@iitkfoundation.org">cfo@iitkfoundation.org</a></span></p>
-          <p><strong>Email:</strong> <span><a href="mailto:dean@dora.iitk.ac.in">dean@dora.iitk.ac.in</a></span></p>
-
+          <p class="mt-2"><strong>Phone:</strong> <span><a href="tel:+16505078719" class="hover-underline">+1 650-507-8719</a></span></p>
+          <p><strong>Email:</strong> <span><a href="mailto:cfo@iitkfoundation.org" class="hover-underline">cfo@iitkfoundation.org</a></span></p>
+          <p><strong>Email:</strong> <span><a href="mailto:dean@dora.iitk.ac.in" class="hover-underline">dean@dora.iitk.ac.in</a></span></p>
+          
         </div>
         <div class="col-lg-2 col-6 mt-2 footer-links">
           <h4>Useful Links</h4>
